@@ -20,20 +20,48 @@
     flex: 1;
     /* background-color: green; */
 }
-.container .rightSide {
-    flex: 1;
-    background-color: green;
-    border-radius: 30px;
+.container .leftSide h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #3a4b5c;
+}
+.container .leftSide p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #6a7d8b;
+}
+.container .leftSide button {
+    font-size: 15px;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 40px;
+    background-color: #227c9d;
+    transition: all .4s;
+}
+.container .leftSide button:hover {
+    opacity: .8;
 }
 .container .leftSide input {
     width: 100%;
     margin: 10px 0;
-}
-
-.container .leftSide input[type=text],
-.container .leftSide input[type=number] {
     border: none;
     outline: none;
     border-bottom: 1px solid #000;
     padding: 8px 0;
+}
+.container .rightSide {
+    flex: 1;
+    /* background-color: green;
+    border-radius: 30px; */
+    display: flex;
+}
+.container .rightSide .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
