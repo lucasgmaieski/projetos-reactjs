@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './App.module.css';
 import powerImage from './assets/powered.png';
 import leftArrowImage from './assets/leftarrow.png';
+import logoLucas from './assets/luks.png';
 import { GridItem } from "./components/GridItem";
 
 import { levels, calculateImc, Level } from "./helpers/imc";
@@ -73,6 +74,7 @@ const App = () => {
                     }
                 </div>
             </div>
+            <footer><p>Desenvolvido por <a href="https://github.com/lucasgmaieski" target="_blank"><strong>Lucas Maieki</strong></a></p></footer>
         </div>
     );
 }
