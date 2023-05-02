@@ -6,6 +6,7 @@ import { InfoItem } from './components/InfoItem';
 import { useEffect, useState } from 'react';
 import { GridItemType } from './types/GridItemType';
 import { items } from './data/items';
+import { GridItem } from './components/GridItem';
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
                 while(pos < 0 || tmpGrid[pos].item !== null) {
                     pos = Math.floor(Math.random() * (items.length * 2));
                 }
-                tmpGrid[pos].item = 1;
+                tmpGrid[pos].item = i;
             }
         }
         //2.3 -  jogar no state
@@ -46,6 +47,10 @@ function App() {
 
         // passo 3 - começar o jogo 
         setPlaying(true);
+
+    }
+
+    const handleItemClick = (index: number) => {
 
     }
 
@@ -63,7 +68,13 @@ function App() {
             </C.Info>
             <C.GridArea>
                 <C.Grid>
-                
+                    {gridItems.map((item, index) => (
+                        <GridItem
+                            key={index}
+                            item={item}
+                            onClick={() => handleItemClick(index)}
+                        />
+                    ))}
                 </C.Grid>
             </C.GridArea>
         </C.Container>
