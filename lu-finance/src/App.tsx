@@ -9,6 +9,7 @@ import { filterListByMonth, getCurrentMonth } from './helpers/dateFilter';
 import { TableArea } from "./components/TableArea";
 import { InfoArea } from "./components/InfoArea";
 import { InputArea } from "./components/InputArea";
+
 function App() {
     const [list, setList] = useState(items);
     const [filteredList, setFilteredList] = useState<Item[]>([])
@@ -50,7 +51,7 @@ function App() {
         <C.Container>
             <C.Header>
                 <C.HeaderText>
-                    ...{currentMonth}
+                    Sistema Financeiro
                 </C.HeaderText>
             </C.Header>
             <C.Body>

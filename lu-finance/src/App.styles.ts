@@ -3,7 +3,8 @@ import bgMain from './assets/bg.svg';
 
 export const Container = styled.div`
     background-image: URL(${bgMain});
-    height: 500px;
+    height: 100%;
+    min-height: 100vh;
 `;
 
 export const Header = styled.div`

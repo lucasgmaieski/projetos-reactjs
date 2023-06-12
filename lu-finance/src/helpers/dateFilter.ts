@@ -11,7 +11,7 @@ export const filterListByMonth = (list: Item[], date: string): Item[] => {
 
     for(let i in list) {
         // se o ano e mes do item baterem com o ano e mês que estão sendo filtrados
-        if(list[i].date.getFullYear() === parseInt(year) && (list[i].date.getMonth()) === parseInt(month)) {
+        if(list[i].date.getFullYear() === parseInt(year) && (list[i].date.getMonth() ) === parseInt(month)) {
             newList.push(list[i]);
         }
     }
@@ -19,7 +19,7 @@ export const filterListByMonth = (list: Item[], date: string): Item[] => {
 }
 
 export const formatDate = (date: Date): string => {
-    let year = date.getUTCFullYear();
+    let year = date.getFullYear();
     let month = date.getMonth() ;
     let day = date.getDate();
 
@@ -33,4 +33,10 @@ export const formatCurrentMonth = (currentMonth: string): string => {
     let months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
     
     return `${months[parseInt(month) -1]} de ${year}`;
+}
+
+export const formatDateInput = (date: string): string => {
+    let [year, month, day] = date.split('-');
+
+    return `${year}, ${parseInt(month)+1}, ${parseInt(day)}`;
 }
